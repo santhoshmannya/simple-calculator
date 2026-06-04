@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#2c2c2c;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    font-family:Arial, sans-serif;
+}
+
+.container{
+    display:flex;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.history-panel{
+    width:250px;
+    background:#252525;
+    border-radius:30px;
+    padding:20px;
+
+    box-shadow:
+    15px 15px 30px #111,
+    -5px -5px 15px rgba(255,255,255,0.05);
+}
+
+.history-panel{
+    width:220px;
+    background:#3b3b3b;
+    padding:15px;
+    border-radius:10px;
+}
+
+#historyList{
+    list-style:none;
+}
+
+#historyList li{
+    background:#555;
+    padding:8px;
+    margin-bottom:8px;
+    border-radius:4px;
+    color:white;
+}
+
+.calculator{
+    width:380px;
+    background:#3b3b3b;
+    padding:20px;
+    border-radius:10px;
+}
+
+.display{
+    background:#222;
+    color:white;
+    padding:15px;
+    border-radius:5px;
+    text-align:right;
+    margin-bottom:15px;
+}
+
+.expression{
+    color:#aaa;
+    font-size:22px;
+    overflow-x:auto;
+    white-space:nowrap;
+}
+
+.result{
+    color:#ff6b6b;
+    font-size:clamp(35px,8vw,70px);
+    font-weight:600;
+    overflow-x:auto;
+    white-space:nowrap;
+}
+
+.buttons{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+button{
+    width:70px;
+    height:60px;
+    border:none;
+    background:#555;
+    color:white;
+    font-size:22px;
+    cursor:pointer;
+    border-radius:5px;
+}
+
+button:hover{
+    background:#666;
+}
+
+button:active{
+    transform:scale(.95);
+}
+
+.operator{
+    background:#ff6b6b;
+    color:white;
+}
+
+.memory{
+    font-size:16px;
+}
+
+.equal{
+    background:#ff6b6b;
+    color:white;
+    grid-column:span 2;
+    border-radius:5px;
+}
+
+@media(max-width:700px){
+
+    .container{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .history-panel{
+        width:380px;
+    }
+}
